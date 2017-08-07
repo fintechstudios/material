@@ -1395,15 +1395,6 @@ md-progress-circular {
             transform: scale(0);
     opacity: 0; }
 
-.md-truncate {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; }
-  .md-truncate.md-clip {
-    text-overflow: clip; }
-  .md-truncate.flex {
-    width: 0; }
-
 .md-virtual-repeat-container {
   box-sizing: border-box;
   display: block;
@@ -1449,6 +1440,15 @@ md-progress-circular {
   [dir=rtl] .md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-offsetter {
     right: auto;
     left: auto; }
+
+.md-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+  .md-truncate.md-clip {
+    text-overflow: clip; }
+  .md-truncate.flex {
+    width: 0; }
 
 /*
 * Since Layout API uses ng-cloak to hide the dom elements while layouts are adjusted
