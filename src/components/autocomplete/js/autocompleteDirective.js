@@ -223,7 +223,7 @@ angular
  *
  */
 
-function MdAutocomplete ($$mdSvgRegistry) {
+function MdAutocomplete () {
 
   return {
     controller:   'MdAutocompleteCtrl',
@@ -409,7 +409,7 @@ function MdAutocomplete ($$mdSvgRegistry) {
               'tabindex="-1" ' +
               'ng-if="clearButton && $mdAutocompleteCtrl.scope.searchText && !$mdAutocompleteCtrl.isDisabled" ' +
               'ng-click="$mdAutocompleteCtrl.clear($event)">' +
-            '<md-icon md-svg-src="' + $$mdSvgRegistry.mdClose + '"></md-icon>' +
+            '<mdc-icon>close</mdc-icon>' +
           '</button>';
         }
     }

@@ -10,9 +10,8 @@
    * the rest of the calendar controller logic.
    * @ngInject
    */
-  function mdCalendarMonthBodyDirective($compile, $$mdSvgRegistry) {
-    var ARROW_ICON = $compile('<md-icon md-svg-src="' +
-      $$mdSvgRegistry.mdTabsArrow + '"></md-icon>')({})[0];
+  function mdCalendarMonthBodyDirective($compile) {
+    var ARROW_ICON = $compile('<mdc-icon>keyboard_arrow_right</mdc-icon>')({})[0];
 
     return {
       require: ['^^mdCalendar', '^^mdCalendarMonth', 'mdCalendarMonthBody'],

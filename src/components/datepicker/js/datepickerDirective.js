@@ -61,7 +61,7 @@
    *
    */
 
-  function datePickerDirective($$mdSvgRegistry, $mdUtil, $mdAria, inputDirective) {
+  function datePickerDirective($mdUtil, $mdAria, inputDirective) {
     return {
       template: function(tElement, tAttrs) {
         // Buttons are not in the tab order because users can open the calendar via keyboard
@@ -71,23 +71,22 @@
         var ariaLabelValue = tAttrs.ariaLabel || tAttrs.mdPlaceholder;
 
         var calendarButton = (hiddenIcons === 'all' || hiddenIcons === 'calendar') ? '' :
-          '<md-button class="md-datepicker-button md-icon-button" type="button" ' +
+          '<mdc-button class="md-datepicker-button" type="button" ' +
               'tabindex="-1" aria-hidden="true" ' +
               'ng-click="ctrl.openCalendarPane($event)">' +
-            '<md-icon class="md-datepicker-calendar-icon" aria-label="md-calendar" ' +
-                     'md-svg-src="' + $$mdSvgRegistry.mdCalendar + '"></md-icon>' +
-          '</md-button>';
+            '<mdc-icon class="md-datepicker-calendar-icon" aria-label="md-calendar">today</mdc-icon>' +
+          '</mdc-button>';
 
         var triangleButton = '';
 
         if (hiddenIcons !== 'all' && hiddenIcons !== 'triangle') {
           triangleButton = '' +
-            '<md-button type="button" md-no-ink ' +
-              'class="md-datepicker-triangle-button md-icon-button" ' +
+            '<mdc-button type="button" md-no-ink ' +
+              'class="md-datepicker-triangle-button" ' +
               'ng-click="ctrl.openCalendarPane($event)" ' +
               'aria-label="{{::ctrl.locale.msgOpenCalendar}}">' +
             '<div class="md-datepicker-expand-triangle"></div>' +
-          '</md-button>';
+          '</mdc-button>';
 
           tElement.addClass(HAS_TRIANGLE_ICON_CLASS);
         }

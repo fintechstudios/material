@@ -200,9 +200,9 @@ md-datepicker {
   @include rtl(transform, translateX(45%), translateX(-45%));
 }
 
-// Need crazy specificity to override .md-button.md-icon-button.
+// Need crazy specificity to override .mdc-button.md-icon-button.
 // Only apply this high specificity to the property we need to override.
-.md-datepicker-triangle-button.md-button.md-icon-button {
+mdc-button.md-datepicker-triangle-button {
   height: $md-datepicker-triangle-button-width;
   width: $md-datepicker-triangle-button-width;
   position: absolute;

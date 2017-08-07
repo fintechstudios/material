@@ -387,7 +387,7 @@
 
     switch(className.replace(SUFFIXES,"")) {
       case "flex":
-        if ((nodeName == "md-button") || (nodeName == "fieldset")){
+        if ((nodeName == "mdc-button") || (nodeName == "fieldset")){
           // @see https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers
           // Use <div flex> wrapper inside (preferred) or outside
 

@@ -131,7 +131,7 @@ md-calendar {
     cursor: pointer;
   }
 
-  md-icon {
+  mdc-icon {
     @include rtl(transform, rotate(180deg), none);
   }
 
