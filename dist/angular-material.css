@@ -183,94 +183,6 @@ bdo[dir=ltr] {
   direction: ltr;
   unicode-bidi: bidi-override; }
 
-html, body {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  min-height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-/************
- * Headings
- ************/
-.md-display-4 {
-  font-size: 112px;
-  font-weight: 300;
-  letter-spacing: -0.010em;
-  line-height: 112px; }
-
-.md-display-3 {
-  font-size: 56px;
-  font-weight: 400;
-  letter-spacing: -0.005em;
-  line-height: 56px; }
-
-.md-display-2 {
-  font-size: 45px;
-  font-weight: 400;
-  line-height: 64px; }
-
-.md-display-1 {
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 40px; }
-
-.md-headline {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px; }
-
-.md-title {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.005em; }
-
-.md-subhead {
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.010em;
-  line-height: 24px; }
-
-/************
- * Body Copy
- ************/
-.md-body-1 {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.010em;
-  line-height: 20px; }
-
-.md-body-2 {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.010em;
-  line-height: 24px; }
-
-.md-caption {
-  font-size: 12px;
-  letter-spacing: 0.020em; }
-
-.md-button {
-  letter-spacing: 0.010em; }
-
-/************
- * Defaults
- ************/
-button,
-select,
-html,
-textarea,
-input {
-  font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-select,
-button,
-textarea,
-input {
-  font-size: 100%; }
-
 /*
 *
 *  Responsive attributes
@@ -464,13 +376,13 @@ md-autocomplete {
         -webkit-transform: scale(1);
                 transform: scale(1);
         opacity: 1; }
-    md-autocomplete .md-show-clear-button button md-icon {
+    md-autocomplete .md-show-clear-button button mdc-icon {
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate3d(-50%, -50%, 0) scale(0.9);
               transform: translate3d(-50%, -50%, 0) scale(0.9); }
-      md-autocomplete .md-show-clear-button button md-icon path {
+      md-autocomplete .md-show-clear-button button mdc-icon path {
         stroke-width: 0; }
     md-autocomplete .md-show-clear-button button.ng-enter {
       -webkit-transform: scale(0);
@@ -851,7 +763,7 @@ md-bottom-sheet {
       box-shadow: none;
       margin: 0;
       position: relative; }
-      .md-chips md-chip .md-chip-remove md-icon {
+      .md-chips md-chip .md-chip-remove mdc-icon {
         height: 18px;
         width: 18px;
         position: absolute;
@@ -994,10 +906,10 @@ md-calendar {
     padding: 0 24px 0 0; }
   md-calendar-month .md-calendar-month-label:not(.md-calendar-month-label-disabled) {
     cursor: pointer; }
-  .md-calendar-month-label md-icon {
+  .md-calendar-month-label mdc-icon {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
-    [dir=rtl] .md-calendar-month-label md-icon {
+    [dir=rtl] .md-calendar-month-label mdc-icon {
       -webkit-transform: none;
               transform: none; }
   .md-calendar-month-label span {
@@ -1195,7 +1107,7 @@ md-datepicker {
     -webkit-transform: translateX(-45%);
             transform: translateX(-45%); }
 
-.md-datepicker-triangle-button.md-button.md-icon-button {
+mdc-button.md-datepicker-triangle-button {
   height: 36px;
   width: 36px;
   position: absolute;

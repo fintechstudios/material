@@ -356,40 +356,6 @@ $checkbox-border-width: 2px !default;
     }
   }
 
-  // unchecked
-  .md-icon {
-    box-sizing: border-box;
-    transition: 240ms;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $width;
-    height: $height;
-    border-width: $border-width;
-    border-style: solid;
-    border-radius: $border-radius;
-  }
-
-  &#{$checkedSelector} .md-icon {
-    border-color: transparent;
-
-    &:after {
-      box-sizing: border-box;
-      transform: rotate(45deg);
-      position: absolute;
-      left: $width / 3 - $border-width;
-      top: $width / 9 - $border-width;
-      display: table;
-      width: $width / 3;
-      height: $width * 2 / 3;
-      border-width: $border-width;
-      border-style: solid;
-      border-top: 0;
-      border-left: 0;
-      content: '';
-    }
-  }
-
   // disabled
   &[disabled] {
     cursor: default;
@@ -684,103 +650,6 @@ bdo[dir=ltr] {
   unicode-bidi: bidi-override;
 }
 
-
-// Global page styles
-//
-// [2] Ensure the page always fills at least the entire height of the viewport.
-// [3] Prevent iOS text size adjust after orientation change, without disabling user zoom
-// [4] Fonts on OSX will look more consistent with other systems that do not
-// render text using sub-pixel anti-aliasing.
-
-html, body {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-
-  min-height: 100%; // [2]
-
-  -webkit-text-size-adjust: 100%; // [3]
-  -ms-text-size-adjust: 100%; // [3]
-
-  -webkit-font-smoothing: antialiased; // [4]
-  -moz-osx-font-smoothing: grayscale; // [4]
-}
-
-md-select, md-card, md-list, md-toolbar,
-ul, ol, p, h1, h2, h3, h4, h5, h6 {
-  //text-rendering: optimizeLegibility;
-}
-
-/************
- * Headings
- ************/
-.md-display-4 {
-  font-size: $display-4-font-size-base;
-  font-weight: 300;
-  letter-spacing: -0.010em;
-  line-height: $display-4-font-size-base;
-}
-.md-display-3 {
-  font-size: $display-3-font-size-base;
-  font-weight: 400;
-  letter-spacing: -0.005em;
-  line-height: $display-3-font-size-base;
-}
-.md-display-2 {
-  font-size: $display-2-font-size-base;
-  font-weight: 400;
-  line-height: rem(6.4);
-}
-.md-display-1 {
-  font-size: $display-1-font-size-base;
-  font-weight: 400;
-  line-height: rem(4);
-}
-.md-headline {
-  font-size: $headline-font-size-base;
-  font-weight: 400;
-  line-height: rem(3.2);
-}
-.md-title {
-  @include md-title();
-}
-.md-subhead {
-  @include md-subhead();
-}
-/************
- * Body Copy
- ************/
-.md-body-1 {
-  @include md-body-1();
-}
-.md-body-2 {
-  @include md-body-2();
-}
-.md-caption {
-  font-size: $caption-font-size-base;
-  letter-spacing: 0.020em;
-}
-.md-button {
-  letter-spacing: 0.010em;
-}
-
-/************
- * Defaults
- ************/
-
-button,
-select,
-html,
-textarea,
-input {
-  font-family: $font-family;
-}
-
-select,
-button,
-textarea,
-input {
-  font-size: 100%;
-}
 
 /*
 *
@@ -1439,7 +1308,7 @@ md-autocomplete {
         opacity: 1;
       }
     }
-    md-icon {
+    mdc-icon {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1887,7 +1756,7 @@ $contact-chip-name-width: rem(12) !default;
       box-shadow: none;
       margin: 0;
       position: relative;
-      md-icon {
+      mdc-icon {
         height: $chip-delete-icon-size;
         width: $chip-delete-icon-size;
         position: absolute;
@@ -2128,7 +1997,7 @@ md-calendar {
     cursor: pointer;
   }
 
-  md-icon {
+  mdc-icon {
     @include rtl(transform, rotate(180deg), none);
   }
 
@@ -2376,9 +2245,9 @@ md-datepicker {
   @include rtl(transform, translateX(45%), translateX(-45%));
 }
 
-// Need crazy specificity to override .md-button.md-icon-button.
+// Need crazy specificity to override .mdc-button.md-icon-button.
 // Only apply this high specificity to the property we need to override.
-.md-datepicker-triangle-button.md-button.md-icon-button {
+mdc-button.md-datepicker-triangle-button {
   height: $md-datepicker-triangle-button-width;
   width: $md-datepicker-triangle-button-width;
   position: absolute;
