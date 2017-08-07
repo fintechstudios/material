@@ -4,17 +4,17 @@
   "description": "The AngularJS Material project is an implementation of Material Design in AngularJS. This project provides a set of reusable, well-tested, and accessible Material Design UI components. AngularJS Material is supported internally at Google by the AngularJS, Material Design UX and other product teams.",
   "keywords": "client-side, browser, material, material-design, design, angularjs, angular.js, css, components, google",
   "homepage": "https://material.angularjs.org",
-  "bugs": "https://github.com/angular/material/issues",
+  "bugs": "https://github.com/fintechstudios/material-slim/issues",
   "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/angular/material/blob/master/LICENSE"
+      "url": "https://github.com/fintechstudios/material-slim/blob/master/LICENSE"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/angular/material.git"
+    "url": "git://github.com/fintechstudios/material-slim.git"
   },
   "private": true,
   "style": "./dist/angular-material.css",
@@ -82,6 +82,8 @@
     "prom": "git pull --rebase origin master",
     "current-branch": "git rev-parse --abbrev-ref HEAD",
     "merge-base": "git merge-base $(npm run -s current-branch) origin/master",
-    "squash": "git rebase -i $(npm run -s merge-base)"
+    "squash": "git rebase -i $(npm run -s merge-base)",
+    "version": "gulp build --release && git add -A dist",
+    "postversion": "git push && git push --tags"
   }
 }
