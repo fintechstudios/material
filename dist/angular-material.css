@@ -913,21 +913,6 @@ md-bottom-sheet {
   .md-chip-input-container md-autocomplete {
     border: none; } }
 
-md-content {
-  display: block;
-  position: relative;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch; }
-  md-content[md-scroll-y] {
-    overflow-y: auto;
-    overflow-x: hidden; }
-  md-content[md-scroll-x] {
-    overflow-x: auto;
-    overflow-y: hidden; }
-  @media print {
-    md-content {
-      overflow: visible !important; } }
-
 /** Styles for mdCalendar. */
 md-calendar {
   font-size: 13px;
@@ -1234,6 +1219,21 @@ md-datepicker[disabled] .md-datepicker-triangle-button {
   -webkit-transform: translateY(0);
           transform: translateY(0); }
 
+md-content {
+  display: block;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  md-content[md-scroll-y] {
+    overflow-y: auto;
+    overflow-x: hidden; }
+  md-content[md-scroll-x] {
+    overflow-x: auto;
+    overflow-y: hidden; }
+  @media print {
+    md-content {
+      overflow: visible !important; } }
+
 @-webkit-keyframes indeterminate-rotate {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1395,6 +1395,15 @@ md-progress-circular {
             transform: scale(0);
     opacity: 0; }
 
+.md-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+  .md-truncate.md-clip {
+    text-overflow: clip; }
+  .md-truncate.flex {
+    width: 0; }
+
 .md-virtual-repeat-container {
   box-sizing: border-box;
   display: block;
@@ -1440,15 +1449,6 @@ md-progress-circular {
   [dir=rtl] .md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-offsetter {
     right: auto;
     left: auto; }
-
-.md-truncate {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; }
-  .md-truncate.md-clip {
-    text-overflow: clip; }
-  .md-truncate.flex {
-    width: 0; }
 
 /*
 * Since Layout API uses ng-cloak to hide the dom elements while layouts are adjusted
