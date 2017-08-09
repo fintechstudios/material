@@ -11,8 +11,6 @@
    * @ngInject
    */
   function mdCalendarMonthBodyDirective($compile) {
-    var ARROW_ICON = $compile('<mdc-icon>keyboard_arrow_right</mdc-icon>')({})[0];
-
     return {
       require: ['^^mdCalendar', '^^mdCalendarMonth', 'mdCalendarMonthBody'],
       scope: { offset: '=mdMonthOffset' },
@@ -26,7 +24,7 @@
 
         monthBodyCtrl.calendarCtrl = calendarCtrl;
         monthBodyCtrl.monthCtrl = monthCtrl;
-        monthBodyCtrl.arrowIcon = ARROW_ICON.cloneNode(true);
+        monthBodyCtrl.arrowIcon = $compile('<mdc-icon>keyboard_arrow_right</mdc-icon>')(scope)[0];
 
         // The virtual-repeat re-uses the same DOM elements, so there are only a limited number
         // of repeated items that are linked, and then those elements have their bindings updated.
