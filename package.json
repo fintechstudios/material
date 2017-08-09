@@ -85,6 +85,7 @@
     "current-branch": "git rev-parse --abbrev-ref HEAD",
     "merge-base": "git merge-base $(npm run -s current-branch) origin/master",
     "squash": "git rebase -i $(npm run -s merge-base)",
+    "rerelease": "git tag --delete v1.1.4 && git push --delete origin v1.1.4 && npm version 1.1.4",
     "version": "gulp build --release && git add -A dist",
     "postversion": "git push && git push --tags"
   }
