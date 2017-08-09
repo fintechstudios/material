@@ -1184,7 +1184,7 @@ md-autocomplete {
     background: transparent;
     height: auto;
 
-    md-input-container {
+    mdc-textfield {
       padding-bottom: 0;
     }
     md-autocomplete-wrap {
@@ -1223,7 +1223,7 @@ md-autocomplete {
       z-index: $z-index-backdrop + 1;
     }
 
-    md-input-container, input {
+    mdc-textfield, input {
       // Layout [flex]
       flex: 1 1 0%;
       box-sizing: border-box;
