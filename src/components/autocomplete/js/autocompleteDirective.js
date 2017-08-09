@@ -347,7 +347,7 @@ function MdAutocomplete () {
       function getInputElement () {
         if (attr.mdFloatingLabel) {
           return '\
-            <md-input-container ng-if="floatingLabel">\
+            <mdc-textfield ng-if="floatingLabel">\
               <label>{{floatingLabel}}</label>\
               <input type="search"\
                   ' + (tabindex != null ? 'tabindex="' + tabindex + '"' : '') + '\
@@ -372,7 +372,7 @@ function MdAutocomplete () {
                   aria-activedescendant=""\
                   aria-expanded="{{!$mdAutocompleteCtrl.hidden}}"/>\
               <div md-autocomplete-parent-scope md-autocomplete-replace>' + leftover + '</div>\
-            </md-input-container>';
+            </mdc-textfield>';
         } else {
           return '\
             <input type="search"\

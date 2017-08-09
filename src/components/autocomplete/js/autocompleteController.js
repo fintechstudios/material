@@ -159,7 +159,7 @@ function MdAutocompleteCtrl ($scope, $element, $mdUtil, $mdConstant, $mdTheming,
      */
     function getVerticalOffset () {
       var offset = 0;
-      var inputContainer = $element.find('md-input-container');
+      var inputContainer = $element.find('mdc-textfield');
       if (inputContainer.length) {
         var input = inputContainer.find('input');
         offset = inputContainer.prop('offsetHeight');
