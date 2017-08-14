@@ -14,8 +14,10 @@ Angular Materialto cover the components that are yet to be implemented in MDC.
 
 ## Installing
 
+Version 3.0.0 uses the codebase from angular-material 1.1.4 stable
+
 ```bash
-npm install github:fintechstudios/material-slim#1.1.4
+npm install github:fintechstudios/material-slim#3.0.0
 ```
 
 Once you have all the necessary assets installed, add `ngMaterial` as a dependency for your app:
