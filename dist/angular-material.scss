@@ -2309,34 +2309,6 @@ md-content {
 
 
 
-$progress-circular-indeterminate-duration: 1568.63ms !default;
-
-@keyframes indeterminate-rotate {
-    0%       { transform: rotate(0deg); }
-    100%     { transform: rotate(360deg); }
-}
-
-// Used to avoid unnecessary layout
-md-progress-circular {
-    position: relative;
-    display: block;
-
-    &._md-progress-circular-disabled {
-        visibility: hidden;
-    }
-
-    &.md-mode-indeterminate svg {
-        animation: indeterminate-rotate $progress-circular-indeterminate-duration linear infinite;
-    }
-
-    svg {
-        position: absolute;
-        overflow: visible;
-        top: 0;
-        left: 0;
-    }
-}
-
 .md-sticky-clone {
   z-index: 2;
   top: 0;
@@ -2422,23 +2394,34 @@ $subheader-sticky-shadow: 0px 2px 4px 0 rgba(0,0,0,0.16) !default;
   }
 }
 
-.md-truncate {
-  overflow: hidden;
-  white-space: nowrap;
+$progress-circular-indeterminate-duration: 1568.63ms !default;
 
-  // Default overflow is ellipsis
-  text-overflow: ellipsis;
-
-  // Allow override to use clipping
-  &.md-clip {
-    text-overflow: clip;
-  }
-
-  // This is a flex-specific hack that forces the element to only take up available space.
-  &.flex {
-    width: 0;
-  }
+@keyframes indeterminate-rotate {
+    0%       { transform: rotate(0deg); }
+    100%     { transform: rotate(360deg); }
 }
+
+// Used to avoid unnecessary layout
+md-progress-circular {
+    position: relative;
+    display: block;
+
+    &._md-progress-circular-disabled {
+        visibility: hidden;
+    }
+
+    &.md-mode-indeterminate svg {
+        animation: indeterminate-rotate $progress-circular-indeterminate-duration linear infinite;
+    }
+
+    svg {
+        position: absolute;
+        overflow: visible;
+        top: 0;
+        left: 0;
+    }
+}
+
 $tooltip-fontsize-lg: 10px !default;
 $tooltip-fontsize-sm: 14px !default;
 $tooltip-height-lg: 22px !default;
@@ -2508,6 +2491,23 @@ $tooltip-max-width: 32px !default;
   }
 }
 
+.md-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+
+  // Default overflow is ellipsis
+  text-overflow: ellipsis;
+
+  // Allow override to use clipping
+  &.md-clip {
+    text-overflow: clip;
+  }
+
+  // This is a flex-specific hack that forces the element to only take up available space.
+  &.flex {
+    width: 0;
+  }
+}
 $virtual-repeat-scrollbar-width: 16px !default;
 
 .md-virtual-repeat-container {
