@@ -775,6 +775,7 @@ function MdAutocompleteCtrl ($scope, $element, $mdUtil, $mdConstant, $mdTheming,
       }).finally(function () {
         $scope.selectedItem = ctrl.matches[ index ];
         setLoading(false);
+        doBlur(true);
       });
     }, false);
   }
