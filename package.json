@@ -1,6 +1,6 @@
 {
   "name": "angular-material",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Slim build of AngularJS Material to provide interim support for components not yet implemented in MDC-Web",
   "keywords": "client-side, browser, material, material-design, design, angularjs, angular.js, css, components, google",
   "bugs": "https://github.com/fintechstudios/material-slim/issues",
