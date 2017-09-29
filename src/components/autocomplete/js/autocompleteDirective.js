@@ -96,6 +96,8 @@ angular
  * @param {number=} md-delay Specifies the amount of time (in milliseconds) to wait before looking
  *     for results
  * @param {boolean=} md-clear-button Whether the clear button for the autocomplete input should show up or not.
+ * @param {string=} md-prefix-icon If specified, shows the given Material icon immediately before the input (but within
+ *     the autocomplete wrapper).
  * @param {boolean=} md-autofocus If true, the autocomplete will be automatically focused when a `$mdDialog`,
  *     `$mdBottomsheet` or `$mdSidenav`, which contains the autocomplete, is opening. <br/><br/>
  *     Also the autocomplete will immediately focus the input element.
@@ -103,6 +105,9 @@ angular
  * @param {boolean=} md-autoselect If set to true, the first item will be automatically selected
  *     in the dropdown upon open.
  * @param {string=} md-menu-class This will be applied to the dropdown menu for styling
+ * @param {number=} md-item-size The height or width of the repeated elements (which must be identical for each
+ *     element). Optional. Will attempt to read the size from the dom if missing, but still assumes
+ *     that all repeated nodes have same height or width.
  * @param {string=} md-floating-label This will add a floating label to autocomplete and wrap it in
  *     `md-input-container`
  * @param {string=} md-input-name The name attribute given to the input element to be used with
@@ -249,13 +254,13 @@ function MdAutocomplete () {
       floatingLabel:    '@?mdFloatingLabel',
       autoselect:       '=?mdAutoselect',
       menuClass:        '@?mdMenuClass',
-      itemSize:         '@?mdItemSize',
+      itemSize:         '=?mdItemSize',
       inputId:          '@?mdInputId',
       escapeOptions:    '@?mdEscapeOptions',
       dropdownItems:    '=?mdDropdownItems',
       dropdownPosition: '@?mdDropdownPosition',
       clearButton:      '=?mdClearButton',
-      prefixIcon:       '=?mdcPrefixIcon'
+      prefixIcon:       '@?mdcPrefixIcon'
     },
     compile: function(tElement, tAttrs) {
       var attributes = ['md-select-on-focus', 'md-no-asterisk', 'ng-trim', 'ng-pattern'];
