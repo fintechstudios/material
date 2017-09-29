@@ -254,7 +254,8 @@ function MdAutocomplete () {
       escapeOptions:    '@?mdEscapeOptions',
       dropdownItems:    '=?mdDropdownItems',
       dropdownPosition: '@?mdDropdownPosition',
-      clearButton:      '=?mdClearButton'
+      clearButton:      '=?mdClearButton',
+      prefixIcon:       '=?mdcPrefixIcon'
     },
     compile: function(tElement, tAttrs) {
       var attributes = ['md-select-on-focus', 'md-no-asterisk', 'ng-trim', 'ng-pattern'];
@@ -299,6 +300,7 @@ function MdAutocomplete () {
             ng-class="{ \'md-whiteframe-z1\': !floatingLabel, \
                         \'md-menu-showing\': !$mdAutocompleteCtrl.hidden, \
                         \'md-show-clear-button\': !!clearButton }">\
+          ' + getIcon() + '\
           ' + getInputElement() + '\
           ' + getClearButton() + '\
           <md-progress-linear\
@@ -414,6 +416,15 @@ function MdAutocomplete () {
             '<mdc-icon>close</mdc-icon>' +
           '</button>';
         }
+
+      function getIcon() {
+        return '' +
+          '<mdc-icon ' +
+          'ng-if="prefixIcon" ' +
+          'ng-bind="prefixIcon" ' +
+          'ng-click="$mdAutocompleteCtrl.focus($event)">' +
+          '</mdc-icon>';
+      }
     }
   };
 }
