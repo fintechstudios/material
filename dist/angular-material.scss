@@ -2422,75 +2422,23 @@ $subheader-sticky-shadow: 0px 2px 4px 0 rgba(0,0,0,0.16) !default;
   }
 }
 
-$tooltip-fontsize-lg: 10px !default;
-$tooltip-fontsize-sm: 14px !default;
-$tooltip-height-lg: 22px !default;
-$tooltip-height-sm: 32px !default;
-$tooltip-top-margin-lg: 14px !default;
-$tooltip-top-margin-sm: 24px !default;
-$tooltip-lr-padding-lg: 8px !default;
-$tooltip-lr-padding-sm: 16px !default;
-$tooltip-max-width: 32px !default;
-
-.md-tooltip {
-  pointer-events: none;
-  border-radius: 4px;
+.md-truncate {
   overflow: hidden;
-  opacity: 0;
-  font-weight: 500;
-  font-size: $tooltip-fontsize-sm;
   white-space: nowrap;
+
+  // Default overflow is ellipsis
   text-overflow: ellipsis;
-  height: $tooltip-height-sm;
-  line-height: $tooltip-height-sm;
-  padding-right: $tooltip-lr-padding-sm;
-  padding-left: $tooltip-lr-padding-sm;
-  &.md-origin-top {
-    transform-origin: center bottom;
-    margin-top: -$tooltip-top-margin-sm;
-  }
-  &.md-origin-right {
-    transform-origin: left center;
-    margin-left: $tooltip-top-margin-sm;
-  }
-  &.md-origin-bottom {
-    transform-origin: center top;
-    margin-top: $tooltip-top-margin-sm;
-  }
-  &.md-origin-left {
-    transform-origin: right center;
-    margin-left: -$tooltip-top-margin-sm;
+
+  // Allow override to use clipping
+  &.md-clip {
+    text-overflow: clip;
   }
 
-  @media (min-width: $layout-breakpoint-sm) {
-    font-size: $tooltip-fontsize-lg;
-    height: $tooltip-height-lg;
-    line-height: $tooltip-height-lg;
-    padding-right: $tooltip-lr-padding-lg;
-    padding-left: $tooltip-lr-padding-lg;
-    &.md-origin-top { margin-top: -$tooltip-top-margin-lg; }
-    &.md-origin-right { margin-left: $tooltip-top-margin-lg; }
-    &.md-origin-bottom { margin-top: $tooltip-top-margin-lg; }
-    &.md-origin-left { margin-left: -$tooltip-top-margin-lg; }
-  }
-
-  &.md-show-add {
-    transform: scale(0);
-  }
-  &.md-show {
-    transition: $swift-ease-out;
-    transition-duration: 150ms;
-    transform: scale(1);
-    opacity: 0.9;
-  }
-  &.md-hide {
-    transition: $swift-ease-in;
-    transition-duration: 150ms;
-    transform: scale(0);
-    opacity: 0;
+  // This is a flex-specific hack that forces the element to only take up available space.
+  &.flex {
+    width: 0;
   }
 }
-
 $virtual-repeat-scrollbar-width: 16px !default;
 
 .md-virtual-repeat-container {
@@ -2549,23 +2497,6 @@ $virtual-repeat-scrollbar-width: 16px !default;
   }
 }
 
-.md-truncate {
-  overflow: hidden;
-  white-space: nowrap;
-
-  // Default overflow is ellipsis
-  text-overflow: ellipsis;
-
-  // Allow override to use clipping
-  &.md-clip {
-    text-overflow: clip;
-  }
-
-  // This is a flex-specific hack that forces the element to only take up available space.
-  &.flex {
-    width: 0;
-  }
-}
 /*
 * Since Layout API uses ng-cloak to hide the dom elements while layouts are adjusted
 *
