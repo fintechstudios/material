@@ -1,16 +1,4 @@
-html, body {
-  height: 100%;
-  position: relative;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-[tabindex='-1']:focus {
-  outline: none;
-}
 .inset {
   padding: 10px;
 }
@@ -23,47 +11,6 @@ button.md-no-style {
   border: none;
   padding: 0;
   margin: 0;
-}
-
-select,
-button,
-textarea,
-input {
-  vertical-align: baseline;
-}
-
-// Fix Android 4.0 button bugs
-input[type="reset"],
-input[type="submit"],
-html input[type="button"],
-button {
-  cursor: pointer;
-  -webkit-appearance: button;
-
-  &[disabled] {
-    cursor: default;
-  }
-}
-
-textarea {
-  vertical-align: top;
-  overflow: auto;
-}
-
-input {
-  &[type="search"] {
-    -webkit-appearance: textfield;
-    box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-
-    &::-webkit-search-decoration,
-    &::-webkit-search-cancel-button {
-      -webkit-appearance: none;
-    }
-  }
-  &:-webkit-autofill {
-    text-shadow: none;
-  }
 }
 
 .md-visually-hidden {
@@ -194,12 +141,6 @@ input {
 }
 
 // Bi-directional support
-
-html, body {
-  &[dir=rtl], &[dir=ltr] {
-     unicode-bidi: embed
-  }
-}
 
 bdo[dir=rtl] {
   direction: rtl;
