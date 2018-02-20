@@ -2,31 +2,6 @@
 
 .md-THEME_NAME-theme {
 
-  .md-datepicker-input {
-    @include input-placeholder-color('\'{{foreground-3}}\'');
-    color: '{{foreground-1}}';
-  }
-
-  .md-datepicker-input-container {
-    border-bottom-color: '{{foreground-4}}';
-
-    &.md-datepicker-focused {
-      border-bottom-color: '{{primary-color}}';
-
-      .md-accent & {
-        border-bottom-color: '{{accent-color}}';
-      }
-
-      .md-warn & {
-        border-bottom-color: '{{warn-A700}}';
-      }
-    }
-
-    &.md-datepicker-invalid {
-      border-bottom-color: '{{warn-A700}}';
-    }
-  }
-
   .md-datepicker-calendar-pane {
     border-color: '{{background-hue-1}}';
   }
@@ -65,9 +40,5 @@
   // The box-shadow acts as the background for the overlay.
   .md-datepicker-input-mask-opaque {
     box-shadow: 0 0 0 9999px $mask-color;
-  }
-
-  .md-datepicker-open .md-datepicker-input-container {
-    background: $mask-color;
   }
 }
